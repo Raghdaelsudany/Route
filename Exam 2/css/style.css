@@ -1,0 +1,92 @@
+
+body{
+    background-color: #0D0D0D;
+    color: #f9f6f6 !important;
+}
+
+#main{
+    width: 70px;
+    position: fixed;
+    z-index: 999;
+}
+
+.menu{
+    font-size:30px;
+    cursor:pointer;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    overflow: hidden;
+    height: 125px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidenav a {
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+i{
+    cursor: pointer;
+}
+
+.meal-layer{
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.meal:hover .meal-layer{
+    top: 0;
+}
+
+
+
+
+
