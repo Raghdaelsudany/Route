@@ -1,0 +1,21 @@
+
+<app-main-slider></app-main-slider>
+<app-categories></app-categories>
+
+<div class="row">
+    <div *ngFor="let product of products" class="col-md-2">
+        <div class="product px-2 py-4" [routerLink]="['/productDetails', product._id]">
+            <img class="w-100" src="{{product.imageCover}}" alt="">
+            <span class="text-main font-sm fw-bold">{{product.category.name}}</span>
+            <h2 class="h6">{{product.title.split(' ').slice(0,2).join(' ')}}</h2>
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="text-muted">{{product.price}}</span>
+               <div>
+                    <i class="fas fa-star rating-color"></i>
+                    <span class="text-muted">{{product.ratingsAverage}}</span>
+               </div>
+            </div>
+            <button class="btn bg-main text-white w-100 mt-2">+ add</button>
+        </div>
+    </div>
+</div>

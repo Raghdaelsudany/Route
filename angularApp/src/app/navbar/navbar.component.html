@@ -1,0 +1,26 @@
+    
+    <nav class="navbar navbar-expand-sm px-5 py-3 mb-5 d-flex justify-content-between">
+        <div class="d-flex">
+            <a class="mt-1" href="#"><img src="assets/images/freshcart-logo.svg" alt=""></a>
+            
+            <ul class="navbar-nav ms-3 mt-2 mt-lg-0">
+                <li *ngIf="isLogin" class="nav-item"><a class="nav-link"routerLink="home">Home</a></li>
+                <li *ngIf="isLogin" class="nav-item"><a class="nav-link"routerLink="cart">Cart</a></li>
+                <li *ngIf="isLogin" class="nav-item"><a class="nav-link"routerLink="products">Products</a></li>
+                <li *ngIf="isLogin" class="nav-item"><a class="nav-link"routerLink="categories">Categories</a></li>
+                <li *ngIf="isLogin" class="nav-item"><a class="nav-link"routerLink="brands">Brands</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a class="ms-2 p-1" href="#"><i class="fa-brands fab fa-instagram"></i></a>
+            <a class="ms-2 p-1" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="ms-2 p-1" href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a class="ms-2 p-1" href="#"><i class="fa-brands fab fa-linkedin"></i></a>
+            <a class="ms-2 p-1" href="#"><i class="fa-brands fab fa-youtube"></i></a>
+            <a *ngIf="!isLogin" class="ms-2 p-1" routerLink="login">Login</a>
+            <a *ngIf="!isLogin" class="ms-2 p-1" routerLink="register">Register</a>
+            <a *ngIf="isLogin" (click)="logOut()" class="ms-2 p-1 cursor-pointer">Logout</a>
+        </div>
+    </nav>
+    
+    
